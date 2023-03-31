@@ -329,17 +329,6 @@ F 3 "" H 900 4650 50  0001 C CNN
 	1    900  4650
 	1    0    0    -1  
 $EndComp
-$Comp
-L Personnel:C C101
-U 1 1 6425EBE3
-P 900 4800
-F 0 "C101" H 1015 4846 50  0000 L CNN
-F 1 "C" H 1015 4755 50  0000 L CNN
-F 2 "capacitors:cnp_7.5mm_disc" H 938 4650 50  0001 C CNN
-F 3 "~" H 900 4800 50  0001 C CNN
-	1    900  4800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1550 4750 1750 4750
 Wire Wire Line
@@ -348,12 +337,10 @@ Wire Wire Line
 	900  4650 1550 4650
 Wire Wire Line
 	1550 4650 1550 4750
-Connection ~ 900  4650
 Wire Wire Line
 	1550 4950 900  4950
 Wire Wire Line
 	1550 4850 1550 4950
-Connection ~ 900  4950
 $Comp
 L power:GND #PWR0105
 U 1 1 642AD32E
@@ -369,4 +356,17 @@ Wire Wire Line
 	8750 2500 7700 2500
 Wire Wire Line
 	7700 2500 7700 2600
+$Comp
+L Personnel:CP C101
+U 1 1 6425745B
+P 900 4800
+F 0 "C101" H 1018 4846 50  0000 L CNN
+F 1 "CP" H 1018 4755 50  0000 L CNN
+F 2 "capacitors:CP_5x11mm" H 938 4650 50  0001 C CNN
+F 3 "~" H 900 4800 50  0001 C CNN
+	1    900  4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 900  4650
+Connection ~ 900  4950
 $EndSCHEMATC
