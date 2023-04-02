@@ -14,41 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 639F2F95
-P 1900 1650
-F 0 "J1" H 1980 1642 50  0000 L CNN
-F 1 "Conn_01x02" H 1980 1551 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 1900 1650 50  0001 C CNN
-F 3 "~" H 1900 1650 50  0001 C CNN
-	1    1900 1650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2100 1900 2150 1900
-$Comp
-L power:+24V #PWR02
-U 1 1 639F9EC2
-P 2150 1900
-F 0 "#PWR02" H 2150 1750 50  0001 C CNN
-F 1 "+24V" H 2165 2073 50  0000 C CNN
-F 2 "" H 2150 1900 50  0001 C CNN
-F 3 "" H 2150 1900 50  0001 C CNN
-	1    2150 1900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR03
-U 1 1 639FA45A
-P 3350 1900
-F 0 "#PWR03" H 3350 1750 50  0001 C CNN
-F 1 "+5V" H 3365 2073 50  0000 C CNN
-F 2 "" H 3350 1900 50  0001 C CNN
-F 3 "" H 3350 1900 50  0001 C CNN
-	1    3350 1900
-	-1   0    0    1   
-$EndComp
-$Comp
 L Personnel:Transistor_TO92 TR1
 U 1 1 63A006C4
 P 7100 3650
@@ -70,19 +35,6 @@ F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7400 29
 	1    7400 2900
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR0101
-U 1 1 63A01BF9
-P 6450 2600
-F 0 "#PWR0101" H 6450 2450 50  0001 C CNN
-F 1 "+5V" H 6465 2773 50  0000 C CNN
-F 2 "" H 6450 2600 50  0001 C CNN
-F 3 "" H 6450 2600 50  0001 C CNN
-	1    6450 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6450 2600 7200 2600
 Wire Wire Line
 	6450 3200 7200 3200
 Wire Wire Line
@@ -113,53 +65,42 @@ $EndComp
 Wire Wire Line
 	8750 3200 7600 3200
 $Comp
-L Timer_RTC:DS3231 U2
-U 1 1 63A0CE3D
-P 5000 5700
-F 0 "U2" H 4975 6075 50  0000 C CNN
-F 1 "DS3231" H 4975 5984 50  0000 C CNN
-F 2 "Timer_RTC:RTC_DS3231" H 5100 5450 50  0001 C CNN
-F 3 "" H 5070 5650 50  0001 C CNN
-	1    5000 5700
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR07
 U 1 1 63A0D7B1
-P 4500 5450
-F 0 "#PWR07" H 4500 5300 50  0001 C CNN
-F 1 "+5V" H 4515 5623 50  0000 C CNN
-F 2 "" H 4500 5450 50  0001 C CNN
-F 3 "" H 4500 5450 50  0001 C CNN
-	1    4500 5450
-	1    0    0    -1  
+P 6000 5900
+F 0 "#PWR07" H 6000 5750 50  0001 C CNN
+F 1 "+5V" H 6015 6073 50  0000 C CNN
+F 2 "" H 6000 5900 50  0001 C CNN
+F 3 "" H 6000 5900 50  0001 C CNN
+	1    6000 5900
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR08
 U 1 1 63A0DB04
-P 4500 5900
-F 0 "#PWR08" H 4500 5650 50  0001 C CNN
-F 1 "GND" H 4505 5727 50  0000 C CNN
-F 2 "" H 4500 5900 50  0001 C CNN
-F 3 "" H 4500 5900 50  0001 C CNN
-	1    4500 5900
-	1    0    0    -1  
+P 6000 5450
+F 0 "#PWR08" H 6000 5200 50  0001 C CNN
+F 1 "GND" H 6005 5277 50  0000 C CNN
+F 2 "" H 6000 5450 50  0001 C CNN
+F 3 "" H 6000 5450 50  0001 C CNN
+	1    6000 5450
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4650 5550 4500 5550
+	5850 5800 6000 5800
 Wire Wire Line
-	4500 5550 4500 5450
+	6000 5800 6000 5900
 Wire Wire Line
-	4650 5800 4500 5800
+	5850 5550 6000 5550
 Wire Wire Line
-	4500 5900 4500 5800
+	6000 5450 6000 5550
 Text GLabel 1750 3850 0    50   Input ~ 0
 SDA
 Text GLabel 1750 3750 0    50   Input ~ 0
 SCL
-Text GLabel 5300 5550 2    50   Input ~ 0
+Text GLabel 5200 5800 0    50   Input ~ 0
 SCL
-Text GLabel 5300 5800 2    50   Input ~ 0
+Text GLabel 5200 5550 0    50   Input ~ 0
 SDA
 $Comp
 L Connector_Generic:Conn_01x04 J3
@@ -172,45 +113,29 @@ F 3 "~" H 4850 6600 50  0001 C CNN
 	1    4850 6600
 	1    0    0    -1  
 $EndComp
-Text GLabel 4650 6500 0    50   Input ~ 0
+Text GLabel 4650 6700 0    50   Input ~ 0
 SCL
-Text GLabel 4650 6600 0    50   Input ~ 0
+Text GLabel 4650 6800 0    50   Input ~ 0
 SDA
 $Comp
 L power:+5V #PWR0103
 U 1 1 63A12841
-P 4200 6700
-F 0 "#PWR0103" H 4200 6550 50  0001 C CNN
-F 1 "+5V" H 4215 6873 50  0000 C CNN
-F 2 "" H 4200 6700 50  0001 C CNN
-F 3 "" H 4200 6700 50  0001 C CNN
-	1    4200 6700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 63A12C93
-P 4200 6800
-F 0 "#PWR0104" H 4200 6550 50  0001 C CNN
-F 1 "GND" H 4205 6627 50  0000 C CNN
-F 2 "" H 4200 6800 50  0001 C CNN
-F 3 "" H 4200 6800 50  0001 C CNN
-	1    4200 6800
-	1    0    0    -1  
+P 4200 6600
+F 0 "#PWR0103" H 4200 6450 50  0001 C CNN
+F 1 "+5V" H 4215 6773 50  0000 C CNN
+F 2 "" H 4200 6600 50  0001 C CNN
+F 3 "" H 4200 6600 50  0001 C CNN
+	1    4200 6600
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	4200 6700 4650 6700
-Wire Wire Line
-	4650 6800 4200 6800
-Text GLabel 4350 3550 2    50   Input ~ 0
+	4200 6600 4650 6600
+Text GLabel 4350 3850 2    50   Input ~ 0
 SIG
-Text GLabel 6650 3650 0    50   Input ~ 0
+Text GLabel 6200 3650 0    50   Input ~ 0
 SIG
 Wire Wire Line
 	6650 3650 6900 3650
-Wire Wire Line
-	6450 2700 6450 2600
-Connection ~ 6450 2600
 Wire Wire Line
 	6450 3000 6450 3200
 $Comp
@@ -287,55 +212,6 @@ F 3 "" H 2650 2100 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	3000 1650 3350 1650
-Wire Wire Line
-	3000 1900 3350 1900
-Wire Wire Line
-	2100 1750 2100 1900
-$Comp
-L Arduino:Arduino_Pro_Mini XA101
-U 1 1 6425906C
-P 3050 4050
-F 0 "XA101" H 3050 5337 60  0000 C CNN
-F 1 "Arduino_Pro_Mini" H 3050 5231 60  0000 C CNN
-F 2 "Arduino:Arduino_Pro_Mini" H 4850 7800 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mini-05" H 4850 7800 60  0001 C CNN
-	1    3050 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 6425D98D
-P 900 4950
-F 0 "#PWR0106" H 900 4700 50  0001 C CNN
-F 1 "GND" H 905 4777 50  0000 C CNN
-F 2 "" H 900 4950 50  0001 C CNN
-F 3 "" H 900 4950 50  0001 C CNN
-	1    900  4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0107
-U 1 1 6425DD5F
-P 900 4650
-F 0 "#PWR0107" H 900 4500 50  0001 C CNN
-F 1 "+5V" H 915 4823 50  0000 C CNN
-F 2 "" H 900 4650 50  0001 C CNN
-F 3 "" H 900 4650 50  0001 C CNN
-	1    900  4650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1550 4750 1750 4750
-Wire Wire Line
-	1750 4850 1550 4850
-Wire Wire Line
-	900  4650 1550 4650
-Wire Wire Line
-	1550 4650 1550 4750
-Wire Wire Line
-	1550 4950 900  4950
-Wire Wire Line
-	1550 4850 1550 4950
 $Comp
 L power:GND #PWR0105
 U 1 1 642AD32E
@@ -351,24 +227,141 @@ Wire Wire Line
 	8750 2500 7700 2500
 Wire Wire Line
 	7700 2500 7700 2600
+Wire Wire Line
+	2150 1650 2300 1650
 $Comp
-L Personnel:CP C101
-U 1 1 6425745B
-P 900 4800
-F 0 "C101" H 1018 4846 50  0000 L CNN
-F 1 "CP" H 1018 4755 50  0000 L CNN
-F 2 "capacitors:CP_5x11mm" H 938 4650 50  0001 C CNN
-F 3 "~" H 900 4800 50  0001 C CNN
-	1    900  4800
+L Timer_RTC:DS3231 U1
+U 1 1 642970FD
+P 5550 5700
+F 0 "U1" H 5525 6075 50  0000 C CNN
+F 1 "DS3231" H 5525 5984 50  0000 C CNN
+F 2 "Timer_RTC:RTC_DS3231" H 5650 5450 50  0001 C CNN
+F 3 "" H 5620 5650 50  0001 C CNN
+	1    5550 5700
 	1    0    0    -1  
 $EndComp
-Connection ~ 900  4650
-Connection ~ 900  4950
-Connection ~ 2150 1900
+$Comp
+L Arduino:Arduino_Nano_Socket XA1
+U 1 1 64296E22
+P 3050 4050
+F 0 "XA1" H 3050 5287 60  0000 C CNN
+F 1 "Arduino_Nano_Socket" H 3050 5181 60  0000 C CNN
+F 2 "Arduino:Arduino_Nano_Module_sur_Socket" H 4850 7800 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-nano" H 4850 7800 60  0001 C CNN
+	1    3050 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 6429F8C5
+P 4300 6500
+F 0 "#PWR0104" H 4300 6250 50  0001 C CNN
+F 1 "GND" H 4305 6327 50  0000 C CNN
+F 2 "" H 4300 6500 50  0001 C CNN
+F 3 "" H 4300 6500 50  0001 C CNN
+	1    4300 6500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 642A9BAF
+P 1550 4550
+F 0 "#PWR0106" H 1550 4300 50  0001 C CNN
+F 1 "GND" H 1555 4377 50  0000 C CNN
+F 2 "" H 1550 4550 50  0001 C CNN
+F 3 "" H 1550 4550 50  0001 C CNN
+	1    1550 4550
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	2150 1900 2300 1900
+	1750 4550 1550 4550
 Wire Wire Line
-	2100 1650 2150 1650
+	4300 6500 4650 6500
+$Comp
+L power:+12V #PWR0109
+U 1 1 642D754B
+P 1750 4950
+F 0 "#PWR0109" H 1750 4800 50  0001 C CNN
+F 1 "+12V" H 1765 5123 50  0000 C CNN
+F 2 "" H 1750 4950 50  0001 C CNN
+F 3 "" H 1750 4950 50  0001 C CNN
+	1    1750 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0110
+U 1 1 642D8DC8
+P 1400 4850
+F 0 "#PWR0110" H 1400 4700 50  0001 C CNN
+F 1 "+5V" H 1415 5023 50  0000 C CNN
+F 2 "" H 1400 4850 50  0001 C CNN
+F 3 "" H 1400 4850 50  0001 C CNN
+	1    1400 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 4850 1400 4850
+$Comp
+L power:+12V #PWR0101
+U 1 1 642DAF70
+P 6450 2450
+F 0 "#PWR0101" H 6450 2300 50  0001 C CNN
+F 1 "+12V" H 6465 2623 50  0000 C CNN
+F 2 "" H 6450 2450 50  0001 C CNN
+F 3 "" H 6450 2450 50  0001 C CNN
+	1    6450 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2600 6450 2600
+Wire Wire Line
+	6450 2600 6450 2700
+Wire Wire Line
+	6450 2600 6450 2450
+Connection ~ 6450 2600
+$Comp
+L Personnel:R R101
+U 1 1 642E1014
+P 6500 3650
+F 0 "R101" V 6293 3650 50  0000 C CNN
+F 1 "R1.2k" V 6384 3650 50  0000 C CNN
+F 2 "Resistance:R_025W" V 6430 3650 50  0001 C CNN
+F 3 "~" H 6500 3650 50  0001 C CNN
+	1    6500 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 3650 6350 3650
+$Comp
+L Personnel:CP C101
+U 1 1 642EAB77
+P 950 4800
+F 0 "C101" H 832 4754 50  0000 R CNN
+F 1 "CP47µF" H 832 4845 50  0000 R CNN
+F 2 "capacitors:CP_5x11mm_hor" H 988 4650 50  0001 C CNN
+F 3 "~" H 950 4800 50  0001 C CNN
+	1    950  4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 4550 950  4550
+Wire Wire Line
+	950  4550 950  4650
+Connection ~ 1550 4550
+Wire Wire Line
+	950  4950 1750 4950
+Connection ~ 1750 4950
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 642A48E8
+P 1300 1750
+F 0 "J1" H 1380 1742 50  0000 L CNN
+F 1 "Conn_01x04" H 1380 1651 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal" H 1300 1750 50  0001 C CNN
+F 3 "~" H 1300 1750 50  0001 C CNN
+	1    1300 1750
+	-1   0    0    -1  
+$EndComp
 $Comp
 L power:GND1 #PWR0108
 U 1 1 6426DB69
@@ -380,7 +373,46 @@ F 3 "" H 2150 1650 50  0001 C CNN
 	1    2150 1650
 	-1   0    0    1   
 $EndComp
+$Comp
+L power:+12V #PWR0107
+U 1 1 642A8F62
+P 3100 2000
+F 0 "#PWR0107" H 3100 1850 50  0001 C CNN
+F 1 "+12V" H 3115 2173 50  0000 C CNN
+F 2 "" H 3100 2000 50  0001 C CNN
+F 3 "" H 3100 2000 50  0001 C CNN
+	1    3100 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 1900 3100 1900
+Wire Wire Line
+	3100 1900 3100 2000
+Wire Wire Line
+	1500 1650 2150 1650
 Connection ~ 2150 1650
 Wire Wire Line
-	2150 1650 2300 1650
+	1500 1750 1550 1750
+Wire Wire Line
+	1550 1750 1550 1850
+Wire Wire Line
+	1550 1850 1500 1850
+Wire Wire Line
+	1500 1950 2200 1950
+Wire Wire Line
+	2300 1950 2300 1900
+$Comp
+L power:+24V #PWR0111
+U 1 1 642C6AFB
+P 2200 1950
+F 0 "#PWR0111" H 2200 1800 50  0001 C CNN
+F 1 "+24V" H 2215 2123 50  0000 C CNN
+F 2 "" H 2200 1950 50  0001 C CNN
+F 3 "" H 2200 1950 50  0001 C CNN
+	1    2200 1950
+	-1   0    0    1   
+$EndComp
+Connection ~ 2200 1950
+Wire Wire Line
+	2200 1950 2300 1950
 $EndSCHEMATC
