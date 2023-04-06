@@ -14,22 +14,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Personnel:Transistor_TO92 TR1
-U 1 1 63A006C4
-P 7100 3650
-F 0 "TR1" H 7291 3696 50  0000 L CNN
-F 1 "2N2222A" H 7291 3605 50  0000 L CNN
-F 2 "Transistor:TO-92" H 7300 3575 50  0001 L CIN
-F 3 "" H 7100 3650 50  0001 L CNN
-	1    7100 3650
-	1    0    0    -1  
-$EndComp
-$Comp
 L Personnel:RelaisSRD K1
 U 1 1 63A00A45
 P 7400 2900
 F 0 "K1" H 7830 2946 50  0000 L CNN
-F 1 "RelaisSRD" H 7830 2855 50  0000 L CNN
+F 1 "Relais" H 7830 2855 50  0000 L CNN
 F 2 "Relay_THT:Relais_SRD" H 8670 2870 50  0001 C CNN
 F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7400 2900 50  0001 C CNN
 	1    7400 2900
@@ -130,7 +119,7 @@ F 3 "" H 4200 6600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4200 6600 4650 6600
-Text GLabel 4350 3850 2    50   Input ~ 0
+Text GLabel 4350 4050 2    50   Input ~ 0
 SIG
 Text GLabel 6200 3650 0    50   Input ~ 0
 SIG
@@ -143,7 +132,7 @@ L Personnel:Diode_1N4148 D2
 U 1 1 63A307F5
 P 6450 2850
 F 0 "D2" V 6450 2930 50  0000 L CNN
-F 1 "Diode_1N4148" H 6450 2750 50  0001 C CNN
+F 1 "1N4148" H 6450 2750 50  0001 C CNN
 F 2 "pth_diodes:diode_do35" H 6450 2675 50  0001 C CNN
 F 3 "" H 6450 2850 50  0001 C CNN
 	1    6450 2850
@@ -324,7 +313,7 @@ L Personnel:R R101
 U 1 1 642E1014
 P 6500 3650
 F 0 "R101" V 6293 3650 50  0000 C CNN
-F 1 "R1.2k" V 6384 3650 50  0000 C CNN
+F 1 "R1k" V 6384 3650 50  0000 C CNN
 F 2 "Resistance:R_025W" V 6430 3650 50  0001 C CNN
 F 3 "~" H 6500 3650 50  0001 C CNN
 	1    6500 3650
@@ -332,25 +321,6 @@ F 3 "~" H 6500 3650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6200 3650 6350 3650
-$Comp
-L Personnel:CP C101
-U 1 1 642EAB77
-P 950 4800
-F 0 "C101" H 832 4754 50  0000 R CNN
-F 1 "CP47µF" H 832 4845 50  0000 R CNN
-F 2 "capacitors:CP_5x11mm_hor" H 988 4650 50  0001 C CNN
-F 3 "~" H 950 4800 50  0001 C CNN
-	1    950  4800
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1550 4550 950  4550
-Wire Wire Line
-	950  4550 950  4650
-Connection ~ 1550 4550
-Wire Wire Line
-	950  4950 1750 4950
-Connection ~ 1750 4950
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 642A48E8
@@ -415,4 +385,15 @@ $EndComp
 Connection ~ 2200 1950
 Wire Wire Line
 	2200 1950 2300 1950
+$Comp
+L Personnel:Transistor_TO92 TR1
+U 1 1 642D8B0A
+P 7100 3650
+F 0 "TR1" H 7291 3696 50  0000 L CNN
+F 1 "Transistor_TO92" H 7291 3605 50  0000 L CNN
+F 2 "Transistor:TO-92" H 7300 3575 50  0001 L CIN
+F 3 "" H 7100 3650 50  0001 L CNN
+	1    7100 3650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

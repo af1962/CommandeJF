@@ -47,7 +47,7 @@ bool Jf::Ferme(int jour, int mois, int annee)
 		mktime(&dates);
 		ascension = ((jour == dates.tm_mday) && (mois - 1 == dates.tm_mon));
 
-		// Jour f�ri�s connus
+  	// Jour f�ri�s connus
 		for (int i = 0; i < 15; i = i + 2)
 		{
 			if ((feries[i] == jour) && (feries[i + 1] == mois))
