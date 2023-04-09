@@ -43,16 +43,14 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 63A045DA
-P 8550 2800
-F 0 "J2" H 8630 2792 50  0000 L CNN
-F 1 "Conn_01x02" H 8630 2701 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 8550 2800 50  0001 C CNN
-F 3 "~" H 8550 2800 50  0001 C CNN
-	1    8550 2800
-	-1   0    0    -1  
+P 8200 2250
+F 0 "J2" H 8280 2242 50  0000 L CNN
+F 1 "Conn_01x02" H 8280 2151 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 8200 2250 50  0001 C CNN
+F 3 "~" H 8200 2250 50  0001 C CNN
+	1    8200 2250
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	8750 3200 7600 3200
 $Comp
 L power:+5V #PWR07
 U 1 1 63A0D7B1
@@ -139,10 +137,6 @@ F 3 "" H 6450 2850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8750 2800 8750 2500
-Wire Wire Line
-	8750 3200 8750 2900
-Wire Wire Line
 	3350 1650 3350 1600
 $Comp
 L Personnel:Trou T1
@@ -212,10 +206,6 @@ F 3 "" H 3350 1600 50  0001 C CNN
 	1    3350 1600
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	8750 2500 7700 2500
-Wire Wire Line
-	7700 2500 7700 2600
 Wire Wire Line
 	2150 1650 2300 1650
 $Comp
@@ -396,4 +386,26 @@ F 3 "" H 7100 3650 50  0001 L CNN
 	1    7100 3650
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+24V #PWR0112
+U 1 1 642FFB92
+P 7800 3300
+F 0 "#PWR0112" H 7800 3150 50  0001 C CNN
+F 1 "+24V" V 7815 3428 50  0000 L CNN
+F 2 "" H 7800 3300 50  0001 C CNN
+F 3 "" H 7800 3300 50  0001 C CNN
+	1    7800 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 3300 7600 3300
+Wire Wire Line
+	7600 3300 7600 3200
+Wire Wire Line
+	8000 2250 7700 2250
+Wire Wire Line
+	7700 2250 7700 2600
+Wire Wire Line
+	8000 2150 8000 2250
+Connection ~ 8000 2250
 $EndSCHEMATC

@@ -8,7 +8,7 @@
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 32 
 
-#define pinJF 9
+#define pinJF 11
 #define pinClock 13
 
 Adafruit_SSD1306 oled(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
